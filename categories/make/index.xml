@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>make on left-blog</title>
+    <link>https://left23333.github.io/categories/make/</link>
+    <description>Recent content in make on left-blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Sep 2019 21:34:43 +0800</lastBuildDate>
+    
+	<atom:link href="https://left23333.github.io/categories/make/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>make及makefile</title>
+      <link>https://left23333.github.io/2019/09/make%E5%8F%8Amakefile/</link>
+      <pubDate>Sun, 15 Sep 2019 21:34:43 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2019/09/make%E5%8F%8Amakefile/</guid>
+      <description>&lt;p&gt;GUN make是一种代码维护工具。
+make工具会根据makefile文件定义的规则和步骤，完成整个软件项目的代码维护工作。
+一般用来简化编译工作，可以极大地提高软件开发地效率。
+windows下一般由集成开发环境自动生成，
+linux下需要由我们按照其语法自己编写。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

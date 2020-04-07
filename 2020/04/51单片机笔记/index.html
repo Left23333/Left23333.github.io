@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.6-BETA">
+<meta name="author" content="Left23333">
+<meta name="keywords" content="笔记">
+<meta name="description" content="">
+
+
+<meta property="og:description" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="51单片机笔记">
+<meta name="twitter:title" content="51单片机笔记">
+<meta property="og:url" content="https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+<meta property="twitter:url" content="https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+<meta property="og:site_name" content="left-blog">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2020-04-07T14:50:08">
+  
+  
+    <meta property="article:modified_time" content="2020-04-07T14:50:08">
+  
+  
+  
+    
+      <meta property="article:section" content="51单片机">
+    
+  
+  
+    
+      <meta property="article:tag" content="笔记">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://left23333.github.io/">
+  <meta property="twitter:image" content="https://left23333.github.io/">
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5?s=640">
+
+
+    <title>51单片机笔记</title>
+
+    <link rel="icon" href="https://left23333.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://left23333.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://left23333.github.io/">left-blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://left23333.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://left23333.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">Left23333</h4>
+        
+          <h5 class="sidebar-profile-bio">学习是所有通往成功道路中最简单的那一条</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://left23333.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://left23333.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://left23333.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://left23333.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://left23333.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/left23333" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://space.bilibili.com/350905033" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">BiliBili</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://www.baby5.xyz" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">我的网站</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://left23333.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('/')"
+       data-behavior="4">
+    
+      <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      51单片机笔记
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-04-07T14:50:08&#43;08:00">
+        
+  
+  
+  
+  
+    2020.4.7
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://left23333.github.io/categories/51%e5%8d%95%e7%89%87%e6%9c%ba">51单片机</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <h1 id="table-of-contents">目录</h1><nav id="TableOfContents">
+<ul>
+<li><a href="#常用元器件">常用元器件</a>
+<ul>
+<li><a href="#发光二极管">发光二极管</a></li>
+</ul></li>
+<li><a href="#定时计数器">定时计数器</a></li>
+<li><a href="#串行口控制寄存器scon">串行口控制寄存器SCON</a></li>
+</ul>
+</nav>
+
+<h1 id="常用元器件">常用元器件</h1>
+
+<p>CAP 电容<br />
+RES 电阻<br />
+CRYSTAL 晶振<br />
+7SEG 数码管<br />
+BUTTON<br />
+LED-BIBY</p>
+
+<h2 id="发光二极管">发光二极管</h2>
+
+<p>二极管PN结，P阳极N阴极，电流方向P极流向N极<br />
+共阴极高电平亮，共阳极低电平亮</p>
+
+<h1 id="定时计数器">定时计数器</h1>
+
+<p>51单片机有T0、T1两个定时/计数器，52多一个T2<br />
+由加法计数器(16位)、方式寄存器TMOD、控制寄存器TCON和内部总线组成</p>
+
+<p>初值X=最大计数值M - 计数值N<br />
+计数方式工作时，引脚T0(P3.4)或T1(P3.5)上的输入脉冲计数</p>
+
+<p>定时/计数器由一下特殊功能寄存器组成：<br />
+(T0)TH0, TL0,  (T1)TH1, TL1, TMOD, TCON</p>
+
+<pre><code>TMOD  D7   D6   D5   D4  |  D3   D2   D1   D0
+(89H) GATE C/T  M1   M0  |  GATE C/T  M1   M0
+           定时器1        |     定时器0
+</code></pre>
+
+<p>M1,  M0  工作方式选择位<br />
+ 0    0     方式0， 13位定时/计数器         X=8192-N/(12/fosc)<br />
+ 0    1     方式1， 16位定时/计数器         X=65536-N/(12/fosc)<br />
+ 1    0     方式2， 8位自动重置定时/计数器   X=256-N/(12/fosc)<br />
+ 1    1     方式3， 两个8位定时/计数器(只有T0有)</p>
+
+<p>C/T: 定时或计数方式选择位，1位计数方式，0位定时<br />
+GATE：门控位，用于控制定时/计数器的启动是否受外部中断请求信号影响</p>
+
+<pre><code>TCON   D7   D6   D5   D4   D3   D2   D1   D0  
+(88H)  TF1  TR1  TF0  TR0  IE1  IT1  IE0  IT0  
+</code></pre>
+
+<p>TF1 T1的标志位，当定时/计数器溢出时标志位置1<br />
+TR1 T1的启动和停止，1启动0停止<br />
+TF0，TR0 控制T0，效果同上<br />
+IE1  IT1  IE0  IT0 外部中断</p>
+
+<h1 id="串行口控制寄存器scon">串行口控制寄存器SCON</h1>
+
+<pre><code>SCON   D7   D6   D5   D4   D3   D2   D1   D0  
+98H    SM0  SM1  SM2  REN  TB8  RB8  TI   RI  
+</code></pre>
+
+<p>SM0, SM1  串口工作方式选择<br />
+ 0    0     方式0，移位寄存器方式       波特率 fosc/12<br />
+ 0    1     方式1，8位异步通信方式      波特率可变<br />
+ 1    0     方式2，9位异步通信方式      fosc/32或fosc/64<br />
+ 1    1     方式3，9位异步通信方式      波特率可变</p>
+
+<p>SM2多设备通信，REN是否允许接收，TB8、RB8在9位异步通信时用到，TI给0表示允许发送、RI给0表示允许接收</p>
+
+<pre><code class="language-shell"> ex：
+ SCON=0x50; //0101 0000
+
+</code></pre>
+
+<p>通信晶振频率为11.0592MHz</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://left23333.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://left23333.github.io/2019/09/make%E5%8F%8Amakefile/" data-tooltip="make及makefile">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2020 Left23333. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://left23333.github.io/2019/09/make%E5%8F%8Amakefile/" data-tooltip="make及makefile">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fleft23333.github.io%2F2020%2F04%2F51%25E5%258D%2595%25E7%2589%2587%25E6%259C%25BA%25E7%25AC%2594%25E8%25AE%25B0%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fleft23333.github.io%2F2020%2F04%2F51%25E5%258D%2595%25E7%2589%2587%25E6%259C%25BA%25E7%25AC%2594%25E8%25AE%25B0%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fleft23333.github.io%2F2020%2F04%2F51%25E5%258D%2595%25E7%2589%2587%25E6%259C%25BA%25E7%25AC%2594%25E8%25AE%25B0%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">Left23333</h4>
+    
+      <div id="about-card-bio">学习是所有通往成功道路中最简单的那一条</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        student
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        重庆
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://left23333.github.io/images/cover2.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://left23333.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/left23333.github.io\/2020\/04\/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0\/';
+          
+            this.page.identifier = '\/2020\/04\/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

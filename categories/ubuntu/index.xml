@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on left-blog</title>
+    <link>https://left23333.github.io/categories/ubuntu/</link>
+    <description>Recent content in Ubuntu on left-blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Sep 2019 19:16:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://left23333.github.io/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu初次登录MySQL报错</title>
+      <link>https://left23333.github.io/2019/09/ubuntu%E5%88%9D%E6%AC%A1%E7%99%BB%E5%BD%95mysql%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Sun, 01 Sep 2019 19:16:09 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2019/09/ubuntu%E5%88%9D%E6%AC%A1%E7%99%BB%E5%BD%95mysql%E6%8A%A5%E9%94%99/</guid>
+      <description>&lt;p&gt;初次登录显示1698(28000)错误代码&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

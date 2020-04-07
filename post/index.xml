@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on left-blog</title>
+    <link>https://left23333.github.io/post/</link>
+    <description>Recent content in Posts on left-blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Apr 2020 14:50:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://left23333.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>51单片机笔记</title>
+      <link>https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 07 Apr 2020 14:50:08 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>make及makefile</title>
+      <link>https://left23333.github.io/2019/09/make%E5%8F%8Amakefile/</link>
+      <pubDate>Sun, 15 Sep 2019 21:34:43 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2019/09/make%E5%8F%8Amakefile/</guid>
+      <description>&lt;p&gt;GUN make是一种代码维护工具。
+make工具会根据makefile文件定义的规则和步骤，完成整个软件项目的代码维护工作。
+一般用来简化编译工作，可以极大地提高软件开发地效率。
+windows下一般由集成开发环境自动生成，
+linux下需要由我们按照其语法自己编写。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>vscode c&amp;cpp多文件编译运行方法</title>
+      <link>https://left23333.github.io/2019/09/vscode-ccpp%E5%A4%9A%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 04 Sep 2019 17:04:52 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2019/09/vscode-ccpp%E5%A4%9A%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C%E6%96%B9%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu初次登录MySQL报错</title>
+      <link>https://left23333.github.io/2019/09/ubuntu%E5%88%9D%E6%AC%A1%E7%99%BB%E5%BD%95mysql%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Sun, 01 Sep 2019 19:16:09 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2019/09/ubuntu%E5%88%9D%E6%AC%A1%E7%99%BB%E5%BD%95mysql%E6%8A%A5%E9%94%99/</guid>
+      <description>&lt;p&gt;初次登录显示1698(28000)错误代码&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>购买服务器与域名搭建个人网站</title>
+      <link>https://left23333.github.io/2019/08/%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Thu, 29 Aug 2019 12:12:07 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2019/08/%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
+      <description>&lt;p&gt;基于Linux环境下的个人网站搭建&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于写博客时插入图片遇到的问题及解决方法</title>
+      <link>https://left23333.github.io/2019/08/%E5%85%B3%E4%BA%8E%E5%86%99%E5%8D%9A%E5%AE%A2%E6%97%B6%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 01 Aug 2019 10:21:08 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2019/08/%E5%85%B3%E4%BA%8E%E5%86%99%E5%8D%9A%E5%AE%A2%E6%97%B6%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+      <description>&lt;p&gt;通过将图片上传GitHub仓库，使用网络图片引用的方式解决图片插入问题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于部署博客后找不到css文件的问题</title>
+      <link>https://left23333.github.io/2019/07/%E5%85%B3%E4%BA%8E%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%90%8E%E6%89%BE%E4%B8%8D%E5%88%B0css%E6%96%87%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 31 Jul 2019 17:51:05 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2019/07/%E5%85%B3%E4%BA%8E%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%90%8E%E6%89%BE%E4%B8%8D%E5%88%B0css%E6%96%87%E4%BB%B6%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;-buildDrafts命令在Windows下不适用导致的部署无法找到css文件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>利用Hugo与GitHub仓库搭建免费的个人博客</title>
+      <link>https://left23333.github.io/2019/07/%E5%88%A9%E7%94%A8hugo%E4%B8%8Egithub%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sun, 28 Jul 2019 19:28:48 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2019/07/%E5%88%A9%E7%94%A8hugo%E4%B8%8Egithub%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;&lt;em&gt;一毛不拔&lt;/em&gt;
+基于Windows10环境下的Hugo免费博客搭建&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
