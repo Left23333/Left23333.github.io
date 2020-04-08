@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.6-BETA">
 <meta name="author" content="Left23333">
 <meta name="keywords" content="笔记">
-<meta name="description" content="">
+<meta name="description" content="51单片机入门">
 
 
-<meta property="og:description" content="">
+<meta property="og:description" content="51单片机入门">
 <meta property="og:type" content="article">
 <meta property="og:title" content="51单片机笔记">
 <meta name="twitter:title" content="51单片机笔记">
 <meta property="og:url" content="https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
 <meta property="twitter:url" content="https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
 <meta property="og:site_name" content="left-blog">
-<meta property="og:description" content="">
-<meta name="twitter:description" content="">
+<meta property="og:description" content="51单片机入门">
+<meta name="twitter:description" content="51单片机入门">
 <meta property="og:locale" content="zh-cn">
 
   
@@ -277,7 +277,9 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h1 id="table-of-contents">目录</h1><nav id="TableOfContents">
+              <p>51单片机入门</p>
+
+<h1 id="table-of-contents">目录</h1><nav id="TableOfContents">
 <ul>
 <li><a href="#常用元器件">常用元器件</a>
 <ul>
@@ -285,6 +287,12 @@
 </ul></li>
 <li><a href="#定时计数器">定时计数器</a></li>
 <li><a href="#串行口控制寄存器scon">串行口控制寄存器SCON</a></li>
+<li><a href="#中断系统">中断系统</a>
+<ul>
+<li><a href="#中断源及中断请求">中断源及中断请求</a></li>
+<li><a href="#中断允许与中断屏蔽">中断允许与中断屏蔽</a></li>
+<li><a href="#中断优先权控制">中断优先权控制</a></li>
+</ul></li>
 </ul>
 </nav>
 
@@ -316,37 +324,42 @@ LED-BIBY</p>
 <pre><code>TMOD  D7   D6   D5   D4  |  D3   D2   D1   D0
 (89H) GATE C/T  M1   M0  |  GATE C/T  M1   M0
            定时器1        |     定时器0
-</code></pre>
 
-<p>M1,  M0  工作方式选择位<br />
- 0    0     方式0， 13位定时/计数器         X=8192-N/(12/fosc)<br />
- 0    1     方式1， 16位定时/计数器         X=65536-N/(12/fosc)<br />
- 1    0     方式2， 8位自动重置定时/计数器   X=256-N/(12/fosc)<br />
- 1    1     方式3， 两个8位定时/计数器(只有T0有)</p>
+M1,  M0  工作方式选择位  
+0    0     方式0， 13位定时/计数器         X=8192-N/(12/fosc)  
+0    1     方式1， 16位定时/计数器         X=65536-N/(12/fosc)  
+1    0     方式2， 8位自动重置定时/计数器   X=256-N/(12/fosc)  
+1    1     方式3， 两个8位定时/计数器(只有T0有)  
+</code></pre>
 
 <p>C/T: 定时或计数方式选择位，1位计数方式，0位定时<br />
 GATE：门控位，用于控制定时/计数器的启动是否受外部中断请求信号影响</p>
 
 <pre><code>TCON   D7   D6   D5   D4   D3   D2   D1   D0  
 (88H)  TF1  TR1  TF0  TR0  IE1  IT1  IE0  IT0  
-</code></pre>
 
-<p>TF1 T1的标志位，当定时/计数器溢出时标志位置1<br />
-TR1 T1的启动和停止，1启动0停止<br />
-TF0，TR0 控制T0，效果同上<br />
-IE1  IT1  IE0  IT0 外部中断</p>
+TF1 T1的标志位，当定时/计数器溢出时标志位置1  
+TR1 T1的启动和停止，1启动0停止  
+TF0，TR0 控制T0，效果同上  
+IE1  IT1  IE0  IT0 外部中断  
+</code></pre>
 
 <h1 id="串行口控制寄存器scon">串行口控制寄存器SCON</h1>
 
+<p>CS-51单片机1个全双工串行异步通信接口。发送接收共用SBUF寄存器，串行口控制寄存器SCON，电源控制寄存器PCON</p>
+
+<p>波特率(bps)=一个字符的二进制位数*字符/秒<br />
+ex: 每秒传送200个字符，每个字符1位起始位、8位数据位、1位校验位和1位停止位。波特率为2200bps</p>
+
 <pre><code>SCON   D7   D6   D5   D4   D3   D2   D1   D0  
 98H    SM0  SM1  SM2  REN  TB8  RB8  TI   RI  
-</code></pre>
 
-<p>SM0, SM1  串口工作方式选择<br />
- 0    0     方式0，移位寄存器方式       波特率 fosc/12<br />
- 0    1     方式1，8位异步通信方式      波特率可变<br />
- 1    0     方式2，9位异步通信方式      fosc/32或fosc/64<br />
- 1    1     方式3，9位异步通信方式      波特率可变</p>
+SM0, SM1  串口工作方式选择  
+0    0     方式0，移位寄存器方式       波特率 fosc/12  
+0    1     方式1，8位异步通信方式      波特率可变  
+1    0     方式2，9位异步通信方式      fosc/32或fosc/64  
+1    1     方式3，9位异步通信方式      波特率可变  
+</code></pre>
 
 <p>SM2多设备通信，REN是否允许接收，TB8、RB8在9位异步通信时用到，TI给0表示允许发送、RI给0表示允许接收</p>
 
@@ -355,7 +368,81 @@ IE1  IT1  IE0  IT0 外部中断</p>
 
 </code></pre>
 
+<p>对于方式1和方式3：T1的初值=256-fosc*2SMOD/(12*波特率*32)</p>
+
+<p>TXD: 发送数据端<br />
+RXD: 接收数据端</p>
+
 <p>通信晶振频率为11.0592MHz</p>
+
+<h1 id="中断系统">中断系统</h1>
+
+<h2 id="中断源及中断请求">中断源及中断请求</h2>
+
+<p>1.外部中断 ~INT0 和 ~INT1<br />
+外部引脚P3.2和P3.3输入，两种触发方式：电平触发及边沿触发。由特殊功能寄存器TCON管理</p>
+
+<pre><code>TCON   D7   D6   D5   D4   D3   D2   D1   D0
+(88H)  TF1  TR1  TF0  TR0  IE1  IT1  IE0  IT0  
+
+IT0(IT1): 外部中断0(或1)触发方式控制位，0电平触发方式，1边沿触发方式  
+IE0(IE1)：外部中断请求标志位
+</code></pre>
+
+<p>ex：<br />
+边沿触发方式时，当机器周期采样P3.2(P3.3)引脚为高电平，下一个周期为低电平，IE0(IE1)置1，向cpu请求中断，cpu相应后硬件自动清0<br />
+电平触发方式时，若引脚为高电平，IE0(IE1)清0，低电平置1，cpu响应后不能由硬件自动清0。为避免多次中断情况，只有在中断服务程序返回前使引脚为高电平，通常外接电路实现</p>
+
+<p>2.定时/计数器T0和T1中断<br />
+当定时计数器溢出时，硬件置TF0(TF1)为1，cpu响应中断后硬件自动清0</p>
+
+<p>3.串口中断<br />
+串行口发送标志位TI和接收标志位RI，任意一个为1，都请求中断，由软件清0</p>
+
+<h2 id="中断允许与中断屏蔽">中断允许与中断屏蔽</h2>
+
+<pre><code>IE     D7   D6   D5   D4   D3   D2   D1   D0
+</code></pre>
+
+<p>(A8H)   EA        ET2  ES   ET1  EX1  ET0  EX0</p>
+
+<pre><code>EA: 中断允许控制位。0屏蔽，1开放(下同)
+ET2：定时/计数器T2溢出中断允许位(c52)
+ES：串行口中断允许位
+ET1：T1溢出中断允许位
+EX1: 外部中断INT1中断允许位
+ET0：T0
+EX0: INT0
+</code></pre>
+
+<h2 id="中断优先权控制">中断优先权控制</h2>
+
+<pre><code>IP     D7   D6   D5   D4   D3   D2   D1   D0
+</code></pre>
+
+<p>(B8H)             PT2  PS   PT1  PX1  PT0  PX0</p>
+
+<pre><code>PT2：定时/计数器T2溢出中断优先级控制位(c52)，1高优先级，0低优先级(下同)
+PS：串行口中断优先级控制位
+PT1：T1
+PX1: 外部中断INT1
+PT0：T0
+PX0: INT0
+</code></pre>
+
+<p>当优先级相同，默认优先级(由高到低)</p>
+
+<pre><code>外部中断0，入口编号0
+定时/计数器0，1
+外部中断1，2
+定时计数器1，3
+串行口，4
+定时/计数器2，5
+</code></pre>
+
+<p>中断过程中不能被同级或低优先级中断，低优先级可能被高优先级中断</p>
+
+<p>指令位RETI或访问IE、IP的指令时，不会响应中断</p>
               
             </div>
           </div>

@@ -313,6 +313,7 @@ linux下需要由我们按照其语法自己编写。</p>
 <li><a href="#稍微复杂一点的makefile实例">稍微复杂一点的makefile实例</a></li>
 <li><a href="#假象目标">假象目标</a></li>
 <li><a href="#makefile变量">makefile变量</a></li>
+<li><a href="#常用的自动变量">常用的自动变量</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -381,7 +382,9 @@ clean:
 一般需要显示的使用make+名字 显示调用<br />
     all:exec1 exec2<br />
     clean:<br />
-    <Tab>rm *.o exec</p>
+        rm *.o exec
+    install:
+        mv main /home</p>
 
 <pre><code class="language-shell">all: 1.c 2.c    //有了这条语句，可以同时执行1.c 2.c
 
@@ -390,7 +393,9 @@ clean:
 2.c: 2.c
     gcc 2.c -o 2
 clean:
-    rm -r 1 2
+    rm -rf 1 2
+install:
+    mv 1 2 /home
 </code></pre>
 
 <h2 id="makefile变量">makefile变量</h2>
@@ -403,16 +408,56 @@ obj=main.o 1.o 2.o
 target=main
 cfalgs=-Wall -g
 
-main:main.o 1.o 2.o
+$(target):$(obj)
     $(cc) $(obj) -o $(target) $(cfalgs)
-main.o:main.c main.h
+main.o:main.c
     $(cc) -c main.c -o main.o $(cfalgs)
-1.o:1.c 1.h
+1.o:1.c
     $(cc) -c 1.c -o 1.o $(cfalgs)
-2.o:2.c 2.h
+2.o:2.c
     $(cc) -c 1.c -o 1.o $(cfalgs)
 clean:
-    rm -r $(obj) $(target)
+    rm -rf $(obj) $(target)
+</code></pre>
+
+<h2 id="常用的自动变量">常用的自动变量</h2>
+
+<p>@ 表示目标名字<br />
+^ 表示所有依赖文件的名字<br />
+&lt; 表示第一个依赖文件的名字</p>
+
+<pre><code class="language-shell">cc=gcc
+obj=main.o 1.o 2.o
+target=main
+cfalgs=-Wall -g
+
+$(target):$(obj)
+    $(cc) $^ -o $@ $(cfalgs)
+main.o:main.c
+    $(cc) -c $&lt; -o $@ $(cfalgs)
+1.o:1.c
+    $(cc) -c $&lt; -o $@ $(cfalgs)
+2.o:2.c
+    $(cc) -c $&lt; -o $@ $(cfalgs)
+clean:
+    rm -rf $(obj) $(target)
+
+</code></pre>
+
+<p>当源文件特别多时通常用通配符%代表一个单词中的若干字符<br />
+ex:%.c</p>
+
+<pre><code class="language-shell">cc=gcc
+obj=main.o 1.o 2.o
+target=main
+cfalgs=-Wall -g
+
+$(target):$(obj)
+    $(cc) $^ -o $@ $(cfalgs)
+%.o:%.c
+    $(cc) -c $&lt; -o $@ $(cfalgs)
+clean:
+    rm -rf *.o $(target)
 </code></pre>
               
             </div>
