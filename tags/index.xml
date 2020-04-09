@@ -30,11 +30,11 @@
     </item>
     
     <item>
-      <title>c&amp;cpp多文件编译</title>
-      <link>https://left23333.github.io/tags/ccpp%E5%A4%9A%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91/</link>
+      <title>vscode c&amp;cpp多文件编译</title>
+      <link>https://left23333.github.io/tags/vscode-ccpp%E5%A4%9A%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91/</link>
       <pubDate>Wed, 04 Sep 2019 17:04:52 +0800</pubDate>
       
-      <guid>https://left23333.github.io/tags/ccpp%E5%A4%9A%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91/</guid>
+      <guid>https://left23333.github.io/tags/vscode-ccpp%E5%A4%9A%E6%96%87%E4%BB%B6%E7%BC%96%E8%AF%91/</guid>
       <description></description>
     </item>
     
@@ -48,29 +48,11 @@
     </item>
     
     <item>
-      <title>个人网站搭建</title>
-      <link>https://left23333.github.io/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</link>
+      <title>服务器域名购买及网站搭建</title>
+      <link>https://left23333.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0%E5%8F%8A%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</link>
       <pubDate>Thu, 29 Aug 2019 12:12:07 +0800</pubDate>
       
-      <guid>https://left23333.github.io/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>域名购买</title>
-      <link>https://left23333.github.io/tags/%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0/</link>
-      <pubDate>Thu, 29 Aug 2019 12:12:07 +0800</pubDate>
-      
-      <guid>https://left23333.github.io/tags/%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>服务器购买</title>
-      <link>https://left23333.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B4%AD%E4%B9%B0/</link>
-      <pubDate>Thu, 29 Aug 2019 12:12:07 +0800</pubDate>
-      
-      <guid>https://left23333.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B4%AD%E4%B9%B0/</guid>
+      <guid>https://left23333.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0%E5%8F%8A%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</guid>
       <description></description>
     </item>
     
@@ -84,29 +66,20 @@
     </item>
     
     <item>
-      <title>博客</title>
-      <link>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2/</link>
+      <title>博客图片插入问题</title>
+      <link>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/</link>
       <pubDate>Thu, 01 Aug 2019 10:21:08 +0800</pubDate>
       
-      <guid>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>博客中图片插入方法</title>
-      <link>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Thu, 01 Aug 2019 10:21:08 +0800</pubDate>
-      
-      <guid>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E6%96%B9%E6%B3%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>博客不产生样式</title>
-      <link>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2%E4%B8%8D%E4%BA%A7%E7%94%9F%E6%A0%B7%E5%BC%8F/</link>
+      <title>博客部署不产生样式</title>
+      <link>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%BA%A7%E7%94%9F%E6%A0%B7%E5%BC%8F/</link>
       <pubDate>Wed, 31 Jul 2019 17:51:05 +0800</pubDate>
       
-      <guid>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2%E4%B8%8D%E4%BA%A7%E7%94%9F%E6%A0%B7%E5%BC%8F/</guid>
+      <guid>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E4%B8%8D%E4%BA%A7%E7%94%9F%E6%A0%B7%E5%BC%8F/</guid>
       <description></description>
     </item>
     

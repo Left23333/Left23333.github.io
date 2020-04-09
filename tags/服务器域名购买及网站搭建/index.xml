@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>服务器域名购买及网站搭建 on left-blog</title>
+    <link>https://left23333.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0%E5%8F%8A%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</link>
+    <description>Recent content in 服务器域名购买及网站搭建 on left-blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Aug 2019 12:12:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://left23333.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0%E5%8F%8A%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>购买服务器与域名搭建个人网站</title>
+      <link>https://left23333.github.io/2019/08/%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Thu, 29 Aug 2019 12:12:07 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2019/08/%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
+      <description>&lt;p&gt;基于Linux环境下的个人网站搭建&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

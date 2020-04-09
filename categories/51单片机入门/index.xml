@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>51单片机入门 on left-blog</title>
+    <link>https://left23333.github.io/categories/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8/</link>
+    <description>Recent content in 51单片机入门 on left-blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Apr 2020 14:50:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://left23333.github.io/categories/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>51单片机笔记</title>
+      <link>https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Tue, 07 Apr 2020 14:50:08 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;51单片机入门&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
