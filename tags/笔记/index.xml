@@ -6,10 +6,19 @@
     <description>Recent content in 笔记 on left-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Apr 2020 14:50:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 12:09:48 +0800</lastBuildDate>
     
 	<atom:link href="https://left23333.github.io/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>静态库与动态库</title>
+      <link>https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/</link>
+      <pubDate>Fri, 10 Apr 2020 12:09:48 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/</guid>
+      <description>&lt;p&gt;库 是一种代码的二进制的封装形式，将.o文件打包封装就成了库。库可以在任何地方使用，但用户却不能看见他的具体实现。库有利于代码模块化，只要接口设计得合理，改变库的内部实现，不会影响到用户级别的代码使用。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>51单片机笔记</title>
