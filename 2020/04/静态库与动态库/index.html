@@ -7,36 +7,36 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.6-BETA">
 <meta name="author" content="Left23333">
-<meta name="keywords" content="笔记">
-<meta name="description" content="51单片机入门">
+<meta name="keywords" content="tech">
+<meta name="description" content="库 是一种代码的二进制的封装形式，将.o文件打包封装就成了库。库可以在任何地方使用，但用户却不能看见他的具体实现。库有利于代码模块化，只要接口设计得合理，改变库的内部实现，不会影响到用户级别的代码使用。">
 
 
-<meta property="og:description" content="51单片机入门">
+<meta property="og:description" content="库 是一种代码的二进制的封装形式，将.o文件打包封装就成了库。库可以在任何地方使用，但用户却不能看见他的具体实现。库有利于代码模块化，只要接口设计得合理，改变库的内部实现，不会影响到用户级别的代码使用。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="51单片机笔记">
-<meta name="twitter:title" content="51单片机笔记">
-<meta property="og:url" content="https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
-<meta property="twitter:url" content="https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+<meta property="og:title" content="静态库与动态库">
+<meta name="twitter:title" content="静态库与动态库">
+<meta property="og:url" content="https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/">
+<meta property="twitter:url" content="https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/">
 <meta property="og:site_name" content="left-blog">
-<meta property="og:description" content="51单片机入门">
-<meta name="twitter:description" content="51单片机入门">
+<meta property="og:description" content="库 是一种代码的二进制的封装形式，将.o文件打包封装就成了库。库可以在任何地方使用，但用户却不能看见他的具体实现。库有利于代码模块化，只要接口设计得合理，改变库的内部实现，不会影响到用户级别的代码使用。">
+<meta name="twitter:description" content="库 是一种代码的二进制的封装形式，将.o文件打包封装就成了库。库可以在任何地方使用，但用户却不能看见他的具体实现。库有利于代码模块化，只要接口设计得合理，改变库的内部实现，不会影响到用户级别的代码使用。">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2020-04-07T14:50:08">
+    <meta property="article:published_time" content="2020-04-10T12:09:48">
   
   
-    <meta property="article:modified_time" content="2020-04-07T14:50:08">
+    <meta property="article:modified_time" content="2020-04-10T12:09:48">
   
-  
-  
-    
-      <meta property="article:section" content="51单片机入门">
-    
   
   
     
-      <meta property="article:tag" content="笔记">
+      <meta property="article:section" content="动态库与静态库">
+    
+  
+  
+    
+      <meta property="article:tag" content="封装库">
     
   
 
@@ -60,14 +60,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5?s=640">
 
 
-    <title>51单片机笔记</title>
+    <title>静态库与动态库</title>
 
     <link rel="icon" href="https://left23333.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+    <link rel="canonical" href="https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -235,19 +235,19 @@
       <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      51单片机笔记
+      静态库与动态库
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-04-07T14:50:08&#43;08:00">
+      <time itemprop="datePublished" datetime="2020-04-10T12:09:48&#43;08:00">
         
   
   
   
   
-    2020.4.7
+    2020.4.10
   
 
       </time>
@@ -257,7 +257,7 @@
   
     <span>发布在</span>
     
-      <a class="category-link" href="https://left23333.github.io/categories/51%e5%8d%95%e7%89%87%e6%9c%ba%e5%85%a5%e9%97%a8">51单片机入门</a>
+      <a class="category-link" href="https://left23333.github.io/categories/%e5%8a%a8%e6%80%81%e5%ba%93%e4%b8%8e%e9%9d%99%e6%80%81%e5%ba%93">动态库与静态库</a>
     
   
 
@@ -277,191 +277,116 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>51单片机入门</p>
+              <p>库 是一种代码的二进制的封装形式，将.o文件打包封装就成了库。库可以在任何地方使用，但用户却不能看见他的具体实现。库有利于代码模块化，只要接口设计得合理，改变库的内部实现，不会影响到用户级别的代码使用。</p>
 
 <h1 id="table-of-contents">目录</h1><nav id="TableOfContents">
 <ul>
-<li><a href="#常用元器件">常用元器件</a>
-<ul>
-<li><a href="#发光二极管">发光二极管</a></li>
-<li><a href="#数码管">数码管</a>
-<ul>
-<li><a href="#led数码管的显示方式">LED数码管的显示方式</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#定时计数器">定时计数器</a></li>
-<li><a href="#串行口控制寄存器scon">串行口控制寄存器SCON</a></li>
-<li><a href="#中断系统">中断系统</a>
-<ul>
-<li><a href="#中断源及中断请求">中断源及中断请求</a></li>
-<li><a href="#中断允许与中断屏蔽">中断允许与中断屏蔽</a></li>
-<li><a href="#中断优先权控制">中断优先权控制</a></li>
-</ul></li>
+<li><a href="#动态库">动态库</a></li>
+<li><a href="#静态库">静态库</a></li>
+<li><a href="#动态库与静态库的主要区别">动态库与静态库的主要区别</a></li>
+<li><a href="#c-c-混合编程中库的处理">C&amp;C++混合编程中库的处理</a></li>
 </ul>
 </nav>
 
-<h1 id="常用元器件">常用元器件</h1>
+<h1 id="动态库">动态库</h1>
 
-<p>CAP 电容<br />
-RES 电阻<br />
-CRYSTAL 晶振<br />
-7SEG 数码管<br />
-BUTTON<br />
-LED-BIBY</p>
+<p>1.封装动态库
+假设有源代码sum.c, sub.c</p>
 
-<h2 id="发光二极管">发光二极管</h2>
-
-<p>二极管PN结，P阳极N阴极，电流方向P极流向N极<br />
-共阴极高电平亮，共阳极低电平亮</p>
-
-<h2 id="数码管">数码管</h2>
-
-<pre><code>dp  g   f   e   d   c   b   a  
-0   0   1   1   1   1   1   1   //0x3F显示0
+<pre><code class="language-shell">gcc sum.c -c -o sum.o
+gcc sub.c -c -o sub.o
+//封装成库
+gcc -shared -fPIC -o libmymath.so sum.o sub.o
+/*
+-shared 表示要编译一个共享库
+-fPIC 表示要生成与位置无关的代码
+-o 要创建的库的名称，一般约定库的名称格式如下：
+        lib库名.so
+*/
 </code></pre>
 
-<p>共阴com口接地高电平亮，共阳极com口接电，低电平亮</p>
+<p>2.动态库的编译<br />
+只需把.h与.so文件提供给用户使用即可
+用户编译形式如下：</p>
 
-<h3 id="led数码管的显示方式">LED数码管的显示方式</h3>
-
-<p>1.静态显示<br />
-公共端直接接地(共阴极)或接电源(共阳极)，每个数码管的段选线对应一组I/O接口，每个数码管一直显示<br />
-2.动态显示<br />
-所有数码管的段选线与一组I/O接口线并联，公共端由一根I/O线控制，逐个显示</p>
-
-<h1 id="定时计数器">定时计数器</h1>
-
-<p>51单片机有T0、T1两个定时/计数器，52多一个T2<br />
-由加法计数器(16位)、方式寄存器TMOD、控制寄存器TCON和内部总线组成</p>
-
-<p>初值X=最大计数值M - 计数值N<br />
-计数方式工作时，引脚T0(P3.4)或T1(P3.5)上的输入脉冲计数</p>
-
-<p>定时/计数器由一下特殊功能寄存器组成：<br />
-(T0)TH0, TL0,  (T1)TH1, TL1, TMOD, TCON</p>
-
-<pre><code>TMOD  D7   D6   D5   D4  |  D3   D2   D1   D0
-(89H) GATE C/T  M1   M0  |  GATE C/T  M1   M0
-           定时器1        |     定时器0
-
-M1,  M0  工作方式选择位  
-0    0     方式0， 13位定时/计数器         X=8192-N/(12/fosc)  
-0    1     方式1， 16位定时/计数器         X=65536-N/(12/fosc)  
-1    0     方式2， 8位自动重置定时/计数器   X=256-N/(12/fosc)  
-1    1     方式3， 两个8位定时/计数器(只有T0有)  
-</code></pre>
-
-<p>C/T: 定时或计数方式选择位，1位计数方式，0位定时<br />
-GATE：门控位，用于控制定时/计数器的启动是否受外部中断请求信号影响</p>
-
-<pre><code>TCON   D7   D6   D5   D4   D3   D2   D1   D0  
-(88H)  TF1  TR1  TF0  TR0  IE1  IT1  IE0  IT0  
-
-TF1 T1的标志位，当定时/计数器溢出时标志位置1  
-TR1 T1的启动和停止，1启动0停止  
-TF0，TR0 控制T0，效果同上  
-IE1  IT1  IE0  IT0 外部中断  
-</code></pre>
-
-<h1 id="串行口控制寄存器scon">串行口控制寄存器SCON</h1>
-
-<p>CS-51单片机1个全双工串行异步通信接口。发送接收共用SBUF寄存器，串行口控制寄存器SCON，电源控制寄存器PCON</p>
-
-<p>波特率(bps)=一个字符的二进制位数*字符/秒<br />
-ex: 每秒传送200个字符，每个字符1位起始位、8位数据位、1位校验位和1位停止位。波特率为2200bps</p>
-
-<pre><code>SCON   D7   D6   D5   D4   D3   D2   D1   D0  
-98H    SM0  SM1  SM2  REN  TB8  RB8  TI   RI  
-
-SM0, SM1  串口工作方式选择  
-0    0     方式0，移位寄存器方式       波特率 fosc/12  
-0    1     方式1，8位异步通信方式      波特率可变  
-1    0     方式2，9位异步通信方式      fosc/32或fosc/64  
-1    1     方式3，9位异步通信方式      波特率可变  
-</code></pre>
-
-<p>SM2多设备通信，REN是否允许接收，TB8、RB8在9位异步通信时用到，TI给0表示允许发送、RI给0表示允许接收</p>
-
-<pre><code class="language-shell"> ex：
- SCON=0x50; //0101 0000
+<pre><code class="language-shell">gcc main.c  -I 头文件路径 -L 库文件路径 -l库名
+ex:
+    gcc test.c -I ../mymath/ -L ../mymath/ -lmymath
+//路径可以是相对路径也可以是绝对路径
 
 </code></pre>
 
-<p>对于方式1和方式3：T1的初值=256-fosc*2SMOD/(12*波特率*32)</p>
+<p>3.依赖动态库的程序执行<br />
+用户执行时需要指明库所在的路径，通常通过添加环境变量的方式实现<br />
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:库文件路径<br />
+查看库环境变量<br />
+    echo $LD_LIBRARY_PATH</p>
 
-<p>TXD: 发送数据端<br />
-RXD: 接收数据端</p>
+<p>使用命令lld可查看</p>
 
-<p>通信晶振频率为11.0592MHz</p>
+<h1 id="静态库">静态库</h1>
 
-<h1 id="中断系统">中断系统</h1>
+<p>1.封装静态库<br />
+假设有源代码sum.c, sub.c</p>
 
-<h2 id="中断源及中断请求">中断源及中断请求</h2>
-
-<p>1.外部中断 ~INT0 和 ~INT1<br />
-外部引脚P3.2和P3.3输入，两种触发方式：电平触发及边沿触发。由特殊功能寄存器TCON管理</p>
-
-<pre><code>TCON   D7   D6   D5   D4   D3   D2   D1   D0
-(88H)  TF1  TR1  TF0  TR0  IE1  IT1  IE0  IT0  
-
-IT0(IT1): 外部中断0(或1)触发方式控制位，0电平触发方式，1边沿触发方式  
-IE0(IE1)：外部中断请求标志位
+<pre><code class="language-shell">gcc sum.c -c -o sum.o
+gcc sub.c -c -o sub.o
+//静态库的后缀名是.a
+ar -rc libmymath.a  sum.o sub.o
+//-rc 中的r 表示插入目标文件到静态库中，c表示创建指定的静态库
 </code></pre>
 
-<p>ex：<br />
-边沿触发方式时，当机器周期采样P3.2(P3.3)引脚为高电平，下一个周期为低电平，IE0(IE1)置1，向cpu请求中断，cpu相应后硬件自动清0<br />
-电平触发方式时，若引脚为高电平，IE0(IE1)清0，低电平置1，cpu响应后不能由硬件自动清0。为避免多次中断情况，只有在中断服务程序返回前使引脚为高电平，通常外接电路实现</p>
+<p>2.静态库编译</p>
 
-<p>2.定时/计数器T0和T1中断<br />
-当定时计数器溢出时，硬件置TF0(TF1)为1，cpu响应中断后硬件自动清0</p>
+<pre><code class="language-shell">gcc main.c  -I 头文件路径 -L 库文件路径 -l库名
+ex:
+    gcc test.c -I ../mymath/ -L ../mymath/ -lmymath
+//如果该路径下有动态库，则会优先使用动态库
 
-<p>3.串口中断<br />
-串行口发送标志位TI和接收标志位RI，任意一个为1，都请求中断，由软件清0</p>
+//如果要静态链接自己或第三方的库，但又要动态链接系统的库，那么编译方式如下
+gcc xxx.c -I 头文件路径 静态库的完整的名称
+ex:
+    gcc xxx.c -I ../mymath/ ../mymath/libmymath.a
 
-<h2 id="中断允许与中断屏蔽">中断允许与中断屏蔽</h2>
-
-<pre><code>IE     D7   D6   D5   D4   D3   D2   D1   D0
+//全部使用静态库，在编译时加 -static
+gcc main.c  -I 头文件路径 -L 库文件路径 -l库名 -static
 </code></pre>
 
-<p>(A8H)   EA        ET2  ES   ET1  EX1  ET0  EX0</p>
+<h1 id="动态库与静态库的主要区别">动态库与静态库的主要区别</h1>
 
-<pre><code>EA: 中断允许控制位。0屏蔽，1开放(下同)
-ET2：定时/计数器T2溢出中断允许位(c52)
-ES：串行口中断允许位
-ET1：T1溢出中断允许位
-EX1: 外部中断INT1中断允许位
-ET0：T0
-EX0: INT0
+<p>静态库和动态库都是二进制文件(目标文件)的封装</p>
+
+<p>对于动态库，编译程序时，并没有把动态库的内容复制到可执行文件中去，仅仅是做了一个标记，表示可执行文件需要用到某个动态库，当执行程序时，首先需要去LD_LIBRARY_PATH指定的路径下(或库的标准路径，如/lib,如/usr/lib等)查找需要的动态库，才能正常运行。</p>
+
+<p>对于静态库，编译程序时，会把静态库中的内容复制到可执行文件中去，运行程序时，就不再需要那个静态库了。</p>
+
+<p>我们使用得最多的是动态库，理由：
+    1、程序运行时，动态库在内存中只需要一份，而静态库，则可能会有多份拷贝，造成所谓的代码
+    冗余。
+    2、当库更新升级时，对于动态库来说只要接口不变，则不需要重新编译用户程序，如果是静态库，则库改变了，所有使用该库的程序都必须重新编译。</p>
+
+<h1 id="c-c-混合编程中库的处理">C&amp;C++混合编程中库的处理</h1>
+
+<p>c++兼容c，能够直接使用这些功能，用c开发的功能如果打包成库了(经c编译器编译成目标文件)，目标文件中的函数名就已经确定下来。而c++编译器会对函数名进行处理，会由于函数名字不匹配而导致调用c库中的函数失败</p>
+
+<p>解决办法：<br />
+C++提供了一个关键字： extern &ldquo;C&rdquo;, 称为链接指示，通常写在头文件中。但c编译器并不认识这个关键字。因此用法如下：</p>
+
+<pre><code class="language-shell">
+#ifdef __cplusplus
+extern &quot;C&quot;
+{
+#endif
+
+    int sum(int a, int b); // C函数声明
+    int sub(int a, int b); // 可包含多个函数声明
+
+#ifdef __cplusplus
+}
+#endif
 </code></pre>
 
-<h2 id="中断优先权控制">中断优先权控制</h2>
-
-<pre><code>IP     D7   D6   D5   D4   D3   D2   D1   D0
-</code></pre>
-
-<p>(B8H)             PT2  PS   PT1  PX1  PT0  PX0</p>
-
-<pre><code>PT2：定时/计数器T2溢出中断优先级控制位(c52)，1高优先级，0低优先级(下同)
-PS：串行口中断优先级控制位
-PT1：T1
-PX1: 外部中断INT1
-PT0：T0
-PX0: INT0
-</code></pre>
-
-<p>当优先级相同，默认优先级(由高到低)</p>
-
-<pre><code>外部中断0，入口编号0
-定时/计数器0，1
-外部中断1，2
-定时计数器1，3
-串行口，4
-定时/计数器2，5
-</code></pre>
-
-<p>中断过程中不能被同级或低优先级中断，低优先级可能被高优先级中断</p>
-
-<p>指令位RETI或访问IE、IP的指令时，不会响应中断</p>
+<p>负责任的程序员，理应在c语言编写的库中加入该关键字</p>
               
             </div>
           </div>
@@ -473,7 +398,7 @@ PX0: INT0
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">标签</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://left23333.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+  <a class="tag tag--primary tag--small" href="https://left23333.github.io/tags/%E5%B0%81%E8%A3%85%E5%BA%93/">封装库</a>
 
                   </div>
                 
@@ -486,7 +411,7 @@ PX0: INT0
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/" data-tooltip="静态库与动态库">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -494,7 +419,7 @@ PX0: INT0
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://left23333.github.io/2019/09/make%E5%8F%8Amakefile/" data-tooltip="make及makefile">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/" data-tooltip="51单片机笔记">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -512,19 +437,19 @@ PX0: INT0
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -572,7 +497,7 @@ PX0: INT0
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/" data-tooltip="静态库与动态库">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -580,7 +505,7 @@ PX0: INT0
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://left23333.github.io/2019/09/make%E5%8F%8Amakefile/" data-tooltip="make及makefile">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/" data-tooltip="51单片机笔记">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -598,19 +523,19 @@ PX0: INT0
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://left23333.github.io/2020/04/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://left23333.github.io/2020/04/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -640,19 +565,19 @@ PX0: INT0
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fleft23333.github.io%2F2020%2F04%2F51%25E5%258D%2595%25E7%2589%2587%25E6%259C%25BA%25E7%25AC%2594%25E8%25AE%25B0%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fleft23333.github.io%2F2020%2F04%2F%25E9%259D%2599%25E6%2580%2581%25E5%25BA%2593%25E4%25B8%258E%25E5%258A%25A8%25E6%2580%2581%25E5%25BA%2593%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fleft23333.github.io%2F2020%2F04%2F51%25E5%258D%2595%25E7%2589%2587%25E6%259C%25BA%25E7%25AC%2594%25E8%25AE%25B0%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fleft23333.github.io%2F2020%2F04%2F%25E9%259D%2599%25E6%2580%2581%25E5%25BA%2593%25E4%25B8%258E%25E5%258A%25A8%25E6%2580%2581%25E5%25BA%2593%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fleft23333.github.io%2F2020%2F04%2F51%25E5%258D%2595%25E7%2589%2587%25E6%259C%25BA%25E7%25AC%2594%25E8%25AE%25B0%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fleft23333.github.io%2F2020%2F04%2F%25E9%259D%2599%25E6%2580%2581%25E5%25BA%2593%25E4%25B8%258E%25E5%258A%25A8%25E6%2580%2581%25E5%25BA%2593%2F">
           <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
         </a>
       </li>
@@ -744,9 +669,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/left23333.github.io\/2020\/04\/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0\/';
+          this.page.url = 'https:\/\/left23333.github.io\/2020\/04\/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93\/';
           
-            this.page.identifier = '\/2020\/04\/51%E5%8D%95%E7%89%87%E6%9C%BA%E7%AC%94%E8%AE%B0\/'
+            this.page.identifier = '\/2020\/04\/%E9%9D%99%E6%80%81%E5%BA%93%E4%B8%8E%E5%8A%A8%E6%80%81%E5%BA%93\/'
           
         };
         (function() {

@@ -6,10 +6,19 @@
     <description>Recent content in Categories on left-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Apr 2020 14:50:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 12:09:48 +0800</lastBuildDate>
     
 	<atom:link href="https://left23333.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>动态库与静态库</title>
+      <link>https://left23333.github.io/categories/%E5%8A%A8%E6%80%81%E5%BA%93%E4%B8%8E%E9%9D%99%E6%80%81%E5%BA%93/</link>
+      <pubDate>Fri, 10 Apr 2020 12:09:48 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/categories/%E5%8A%A8%E6%80%81%E5%BA%93%E4%B8%8E%E9%9D%99%E6%80%81%E5%BA%93/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>51单片机入门</title>
