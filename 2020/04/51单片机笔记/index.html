@@ -31,12 +31,12 @@
   
   
     
-      <meta property="article:section" content="51单片机入门">
+      <meta property="article:section" content="笔记">
     
   
   
     
-      <meta property="article:tag" content="笔记">
+      <meta property="article:tag" content="51单片机入门">
     
   
 
@@ -257,7 +257,7 @@
   
     <span>发布在</span>
     
-      <a class="category-link" href="https://left23333.github.io/categories/51%e5%8d%95%e7%89%87%e6%9c%ba%e5%85%a5%e9%97%a8">51单片机入门</a>
+      <a class="category-link" href="https://left23333.github.io/categories/%e7%ac%94%e8%ae%b0">笔记</a>
     
   
 
@@ -288,6 +288,7 @@
 <ul>
 <li><a href="#led数码管的显示方式">LED数码管的显示方式</a></li>
 </ul></li>
+<li><a href="#按键">按键</a></li>
 </ul></li>
 <li><a href="#定时计数器">定时计数器</a></li>
 <li><a href="#串行口控制寄存器scon">串行口控制寄存器SCON</a></li>
@@ -328,6 +329,28 @@ LED-BIBY</p>
 公共端直接接地(共阴极)或接电源(共阳极)，每个数码管的段选线对应一组I/O接口，每个数码管一直显示<br />
 2.动态显示<br />
 所有数码管的段选线与一组I/O接口线并联，公共端由一根I/O线控制，逐个显示</p>
+
+<h2 id="按键">按键</h2>
+
+<p>按键按下不会立刻改变电平，延时10ms-20ms再获取电平消除抖动</p>
+
+<p>独立式按键：<br />
+每个键独占跟并口线，处理简单直接判断并口线</p>
+
+<p>行列键盘(矩阵键盘)：<br />
+键位分布在行列交叉点上，占用并口线少，键位越多越明显</p>
+
+<p>行列键盘按键编码：<br />
+高位为1，低位为0，按键按下时高位为0。再将其取反再检测即可知道是哪一个按键</p>
+
+<pre><code>H3  H2  H1  H0  L3  L2  L1  L0
+1   1   1   1   0   0   0   0   //0xf0,
+1   1   1   0   0   0   0   0   //当位于H0,L0的按键按下时，H0变为低电平
+0   0   0   0   1   1   1   0   //0xf0取反,按键按下时L0变低电平
+</code></pre>
+
+<p>行和列编码相加就等于键值<br />
+键值= 0xe0+0x0e;</p>
 
 <h1 id="定时计数器">定时计数器</h1>
 
@@ -473,7 +496,7 @@ PX0: INT0
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">标签</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://left23333.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+  <a class="tag tag--primary tag--small" href="https://left23333.github.io/tags/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%85%A5%E9%97%A8/">51单片机入门</a>
 
                   </div>
                 
