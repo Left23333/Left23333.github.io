@@ -286,23 +286,23 @@
               <p>通过将图片上传GitHub仓库，使用网络图片引用的方式解决图片插入问题</p>
 
 <p>根据vs code提示插入图片
-<img src="https://github.com/left23333/images/raw/master/图片插入问题/提示路径.JPG" alt="按提示插入图片" /></p>
+<img src="https://gitee.com/left23333/images/raw/master/图片插入问题/提示路径.JPG" alt="按提示插入图片" /></p>
 
 <p>但是插入的图片却无法在网页上正常显示
-<img src="https://github.com/left23333/images/raw/master/图片插入问题/图片插入.JPG" alt="text" /></p>
+<img src="https://gitee.com/left23333/images/raw/master/图片插入问题/图片插入.JPG" alt="text" /></p>
 
 <p>尝试更改路径后，发现无论是绝对路劲还是相对路劲都无法显示图片</p>
 
 <p>探索良久后依然无法找到本地图片的插入方式（实际上成功本地插入图片过，但我忘了-_-||），加上本地图片容易丢失所以我选择了网络图片插入方式。</p>
 
 <p>我们利用GitHub仓库，即可实现本地图片的网络化。在GitHub中新建一个仓库，用于存储照片，<strong>记得勾选上创建README</strong>
-<img src="https://github.com/left23333/images/raw/master/图片插入问题/创建存储照片的仓库.JPG" alt="创建仓库" /></p>
+<img src="https://gitee.com/left23333/images/raw/master/图片插入问题/创建存储照片的仓库.JPG" alt="创建仓库" /></p>
 
 <p>copy下仓库的路径
-<img src="https://github.com/left23333/images/raw/master/图片插入问题/复制.JPG" alt="复制路劲" /></p>
+<img src="https://gitee.com/left23333/images/raw/master/图片插入问题/复制.JPG" alt="复制路劲" /></p>
 
 <p>在本地新建一个文件夹，将路径移动到新建文件夹下，将GitHub仓库克隆下来，命令是git clone 仓库地址（要使用git命令得先在电脑上装好git-bash）
-<img src="https://github.com/left23333/images/raw/master/图片插入问题/克隆仓库.JPG" alt="克隆仓库" /></p>
+<img src="https://gitee.com/left23333/images/raw/master/图片插入问题/克隆仓库.JPG" alt="克隆仓库" /></p>
 
 <p>克隆完后会有你所建仓库名的文件夹，在仓库文件夹下添加你要上传到仓库的图片</p>
 
@@ -319,13 +319,13 @@ git push origin master
 
 <p>上传成功后可以在GitHub仓库中进行查看，选择要插入的图片，复制其路径粘贴到markdown文档中，图片插入格式如下</p>
 
-<pre><code class="language-shell">![text](https://github.com/left23333/images/blob/master/图片插入问题/text.JPG)
+<pre><code class="language-shell">![text](https://gitee.com/left23333/images/blob/master/图片插入问题/text.JPG)
 </code></pre>
 
 <p>然而这样仍然无法显示图片，这里我们还需要将路径中的blob改为raw即可，如下</p>
 
-<pre><code class="language-shell">![text](https://github.com/left23333/images/blob/master/图片插入问题/text.JPG)
-![text](https://github.com/left23333/images/raw/master/图片插入问题/text.JPG)
+<pre><code class="language-shell">![text](https://gitee.com/left23333/images/blob/master/图片插入问题/text.JPG)
+![text](https://gitee.com/left23333/images/raw/master/图片插入问题/text.JPG)
 </code></pre>
 
 <p>当图片已经被引用后，再将新的图片推送到GitHub仓库，git可能会报错，解决命令如下</p>
