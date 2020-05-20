@@ -6,10 +6,19 @@
     <description>Recent content in subcategory on left-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Apr 2020 22:41:41 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 18:04:50 +0800</lastBuildDate>
     
 	<atom:link href="https://left23333.github.io/categories/subcategory/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Test</title>
+      <link>https://left23333.github.io/2020/05/test/</link>
+      <pubDate>Wed, 20 May 2020 18:04:50 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2020/05/test/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cpp笔记</title>

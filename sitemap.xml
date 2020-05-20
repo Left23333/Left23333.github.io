@@ -4,7 +4,54 @@
   
   <url>
     <loc>https://left23333.github.io/categories/</loc>
-    <lastmod>2020-05-20T11:29:49+08:00</lastmod>
+    <lastmod>2020-05-20T18:04:50+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://left23333.github.io/post/</loc>
+    <lastmod>2020-05-20T18:04:50+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://left23333.github.io/tags/</loc>
+    <lastmod>2020-05-20T18:04:50+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://left23333.github.io/2020/05/test/</loc>
+    <lastmod>2020-05-20T18:04:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://left23333.github.io/categories/category/</loc>
+    <lastmod>2020-05-20T18:04:50+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://left23333.github.io/</loc>
+    <lastmod>2020-05-20T18:04:50+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://left23333.github.io/categories/subcategory/</loc>
+    <lastmod>2020-05-20T18:04:50+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://left23333.github.io/tags/tag1/</loc>
+    <lastmod>2020-05-20T18:04:50+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://left23333.github.io/tags/tag2/</loc>
+    <lastmod>2020-05-20T18:04:50+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -14,25 +61,7 @@
   </url>
   
   <url>
-    <loc>https://left23333.github.io/post/</loc>
-    <lastmod>2020-05-20T11:29:49+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://left23333.github.io/tags/</loc>
-    <lastmod>2020-05-20T11:29:49+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://left23333.github.io/tags/git/</loc>
-    <lastmod>2020-05-20T11:29:49+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://left23333.github.io/</loc>
     <lastmod>2020-05-20T11:29:49+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -46,30 +75,6 @@
   <url>
     <loc>https://left23333.github.io/2020/04/cpp%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-04-27T22:41:41+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://left23333.github.io/categories/category/</loc>
-    <lastmod>2020-04-27T22:41:41+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://left23333.github.io/categories/subcategory/</loc>
-    <lastmod>2020-04-27T22:41:41+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://left23333.github.io/tags/tag1/</loc>
-    <lastmod>2020-04-27T22:41:41+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://left23333.github.io/tags/tag2/</loc>
-    <lastmod>2020-04-27T22:41:41+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -106,13 +111,13 @@
   </url>
   
   <url>
-    <loc>https://left23333.github.io/tags/vscode/</loc>
+    <loc>https://left23333.github.io/categories/vscode/</loc>
     <lastmod>2019-09-04T17:04:52+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://left23333.github.io/categories/vscode/</loc>
+    <loc>https://left23333.github.io/tags/vscode/</loc>
     <lastmod>2019-09-04T17:04:52+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -123,13 +128,13 @@
   </url>
   
   <url>
-    <loc>https://left23333.github.io/tags/mysql/</loc>
+    <loc>https://left23333.github.io/categories/mysql/</loc>
     <lastmod>2019-09-01T19:16:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://left23333.github.io/categories/mysql/</loc>
+    <loc>https://left23333.github.io/tags/mysql/</loc>
     <lastmod>2019-09-01T19:16:09+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -146,13 +151,13 @@
   </url>
   
   <url>
-    <loc>https://left23333.github.io/tags/%E7%BD%91%E7%AB%99/</loc>
+    <loc>https://left23333.github.io/categories/%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2019-08-29T12:12:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://left23333.github.io/categories/%E7%BD%91%E7%AB%99/</loc>
+    <loc>https://left23333.github.io/tags/%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2019-08-29T12:12:07+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -168,13 +173,13 @@
   </url>
   
   <url>
-    <loc>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://left23333.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2019-08-01T10:21:08+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://left23333.github.io/categories/%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>https://left23333.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2019-08-01T10:21:08+08:00</lastmod>
     <priority>0</priority>
   </url>
