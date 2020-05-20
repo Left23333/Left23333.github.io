@@ -6,10 +6,19 @@
     <description>Recent content in git on left-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2019 10:21:08 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 11:29:49 +0800</lastBuildDate>
     
 	<atom:link href="https://left23333.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git的使用流程</title>
+      <link>https://left23333.github.io/2020/05/git%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/</link>
+      <pubDate>Wed, 20 May 2020 11:29:49 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2020/05/git%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>关于写博客时插入图片遇到的问题及解决方法</title>
