@@ -286,6 +286,11 @@
 
 <p>执行命令后文件夹下将会生成.git文件</p>
 
+<p>上传该路径下的所有内容到暂存区</p>
+
+<pre><code class="language-shell">git add .
+</code></pre>
+
 <p>通常项目中都有read.me,创建read.me文件</p>
 
 <p>将read.me添加到git仓的暂存区</p>
@@ -389,9 +394,19 @@ Date:   Sat Apr 11 17:37:29 2020 +0800
 <pre><code class="language-shell">git clone https://仓库域名地址
 </code></pre>
 
+<p>要push的url</p>
+
+<pre><code class="language-shell">git remote add origin https://github.com/your_name/your_project_name
+</code></pre>
+
+<p>把远程仓库和本地同步，消除差异</p>
+
+<pre><code class="language-shell">git pull origin master --allow-unrelated-histories
+</code></pre>
+
 <p>push到远端托管平台</p>
 
-<pre><code class="language-shell">git push
+<pre><code class="language-shell">git push -u origin master
 </code></pre>
 
 <p>已经克隆过远端代码，需要更新远端代码到本地时，会比较远端与本地代码区别，选择性下载</p>
