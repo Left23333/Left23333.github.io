@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/example.org\/",
+  "author": {
+    "@type": "Person",
+    "name": "Left23333",
+    
+    "image": "https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5"
+    
+  },
+  "name":"left-blog",
+  "description":"",
+  "url":"https:\/\/example.org\/2020\/08\/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD\/",
+  "keywords":"[tech]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.99.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Left23333">
+<meta name="keywords" content="tech">
+<meta name="description" content="">
+
+
+<meta property="og:description" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Js拖拽功能">
+<meta name="twitter:title" content="Js拖拽功能">
+<meta property="og:url" content="https://example.org/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/">
+<meta property="twitter:url" content="https://example.org/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/">
+<meta property="og:site_name" content="left-blog">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2020-08-27T16:44:14">
+  
+  
+    <meta property="article:modified_time" content="2020-08-27T16:44:14">
+  
+  
+  
+    
+      <meta property="article:section" content="JavaScript">
+    
+  
+  
+    
+      <meta property="article:tag" content="JavaScript">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5?s=640">
+
+
+
+
+  <meta property="og:image" content="https://example.org/">
+  <meta property="twitter:image" content="https://example.org/">
+
+
+
+    <title>Js拖拽功能</title>
+
+    <link rel="icon" href="https://example.org/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://example.org/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://example.org/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://example.org/" aria-label="去首页">left-blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://example.org/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://example.org/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">Left23333</h4>
+        
+          <h5 class="sidebar-profile-bio">学习是所有通往成功道路中最简单的那一条</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/" title="Home">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/#about" title="About">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/left23333" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://space.bilibili.com/350905033" target="_blank" rel="noopener" title="BiliBili">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bilibili"></i>
+      
+      <span class="sidebar-button-desc">BiliBili</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://www.baby5.xyz" target="_blank" rel="noopener" title="我的网站">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">我的网站</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://example.org/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('/')"
+       data-behavior="4">
+    
+      <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title">
+      Js拖拽功能
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2020-08-27T16:44:14&#43;08:00">
+        
+  
+  
+  
+  
+    2020.8.27
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://example.org/categories/javascript">JavaScript</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <!-- raw HTML omitted -->
+<p>ondragstart: 用户开始拖动元素时触发<br>
+ondrag: 元素正在拖动时触发<br>
+ondragend: 用户完成元素拖动后触发</p>
+<p>ondragenter: 当被鼠标拖动的对象进入其容器范围内时触发此事件<br>
+ondragover: 当某被拖动的对象在另一对象容器范围内拖动时触发此事件<br>
+ondragleave: 当被鼠标拖动的对象离开其容器范围内时触发此事件<br>
+ondrop: 在一个拖动过程中，释放鼠标键时触发此事件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> allowDrop<span style="color:#f92672">(</span>ev<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    ev.preventDefault<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> drag<span style="color:#f92672">(</span>ev<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    //获取当前拖动元素ID，并设置到DataTransfer中
+</span></span><span style="display:flex;"><span>    ev.dataTransfer.setData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span>, ev.target.id<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>    var dragID <span style="color:#f92672">=</span> ev.target.id;
+</span></span><span style="display:flex;"><span>    //获取当前拖动元素的innerHTML，并设置到DataTransfer中
+</span></span><span style="display:flex;"><span>    ev.dataTransfer.setData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;text&#34;</span>, document.getElementById<span style="color:#f92672">(</span>dragID<span style="color:#f92672">)</span>.innerHTML<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>    ev.dataTransfer.setData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name&#34;</span>, document.getElementById<span style="color:#f92672">(</span>dragID<span style="color:#f92672">)</span>.title<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> drop<span style="color:#f92672">(</span>ev<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    ev.preventDefault<span style="color:#f92672">()</span>;
+</span></span><span style="display:flex;"><span>    //获取DataTransfer中的ID值
+</span></span><span style="display:flex;"><span>    var dragID <span style="color:#f92672">=</span> ev.dataTransfer.getData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>    var dragText <span style="color:#f92672">=</span> ev.dataTransfer.getData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;text&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>    var dragName <span style="color:#f92672">=</span> ev.dataTransfer.getData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    //获取目标元素的id；
+</span></span><span style="display:flex;"><span>    var id <span style="color:#f92672">=</span> ev.target.id;
+</span></span><span style="display:flex;"><span>    //将字符串分割为数组
+</span></span><span style="display:flex;"><span>    var arr <span style="color:#f92672">=</span> id.split<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;p&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        var forid <span style="color:#f92672">=</span> document.getElementById<span style="color:#f92672">(</span>id<span style="color:#f92672">)</span>.getAttribute<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;for&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>        document.getElementById<span style="color:#f92672">(</span>forid<span style="color:#f92672">)</span>.dataset.channel <span style="color:#f92672">=</span> dragID;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    arr<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;p&#39;</span>;
+</span></span><span style="display:flex;"><span>    //将数组合并为字符串
+</span></span><span style="display:flex;"><span>    var pID <span style="color:#f92672">=</span> arr.join<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    //p标签显示为被拖动标签的名称
+</span></span><span style="display:flex;"><span>    document.getElementById<span style="color:#f92672">(</span>pID<span style="color:#f92672">)</span>.innerHTML <span style="color:#f92672">=</span> dragName;
+</span></span><span style="display:flex;"><span>    //input元素赋值为物理通道ID
+</span></span><span style="display:flex;"><span>    //document.getElementById<span style="color:#f92672">(</span>id<span style="color:#f92672">)</span>.value <span style="color:#f92672">=</span> dragID;
+</span></span><span style="display:flex;"><span>    //将物理通道保存到data-content中
+</span></span><span style="display:flex;"><span>    document.getElementById<span style="color:#f92672">(</span>id<span style="color:#f92672">)</span>.dataset.channel <span style="color:#f92672">=</span> dragID;
+</span></span><span style="display:flex;"><span>    //修改title与通道相同
+</span></span><span style="display:flex;"><span>    document.getElementById<span style="color:#f92672">(</span>pID<span style="color:#f92672">)</span>.title <span style="color:#f92672">=</span> dragText;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    //dic_cfg<span style="color:#f92672">[</span>id<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> dragID;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;droptarget&#34;</span> ondrop<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;drop(event)&#34;</span> ondragover<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;allowDrop(event)&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>	&lt;p ondragstart<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;drag(event)&#34;</span> draggable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dragtarget&#34;</span>&gt;拖动我!&lt;/p&gt;
+</span></span><span style="display:flex;"><span>&lt;/div&gt;
+</span></span><span style="display:flex;"><span>&lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;droptarget&#34;</span> ondrop<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;drop(event)&#34;</span> ondragover<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;allowDrop(event)&#34;</span>&gt;&lt;/div&gt;
+</span></span></code></pre></div>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://example.org/tags/javascript/">JavaScript</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2022/05/%E8%AF%AD%E5%8F%A5%E6%94%B6%E9%9B%86/" data-tooltip="语句收集" aria-label="下一篇: 语句收集">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2020/05/git%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/" data-tooltip="Git的使用流程" aria-label="上一篇: Git的使用流程">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://example.org/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fa-facebook-official" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://example.org/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://example.org/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/" title="分享到 Google&#43;" aria-label="分享到 Google&#43;">
+          <i class="fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Left23333. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2022/05/%E8%AF%AD%E5%8F%A5%E6%94%B6%E9%9B%86/" data-tooltip="语句收集" aria-label="下一篇: 语句收集">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://example.org/2020/05/git%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/" data-tooltip="Git的使用流程" aria-label="上一篇: Git的使用流程">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://example.org/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fa-facebook-official" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://example.org/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://example.org/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/" title="分享到 Google&#43;" aria-label="分享到 Google&#43;">
+          <i class="fa-google-plus" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexample.org%2F2020%2F08%2Fjs%25E6%258B%2596%25E6%258B%25BD%25E5%258A%259F%25E8%2583%25BD%2F" aria-label="分享到 Facebook">
+          <i class="fa-facebook-official" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fexample.org%2F2020%2F08%2Fjs%25E6%258B%2596%25E6%258B%25BD%25E5%258A%259F%25E8%2583%25BD%2F" aria-label="分享到 Twitter">
+          <i class="fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fexample.org%2F2020%2F08%2Fjs%25E6%258B%2596%25E6%258B%25BD%25E5%258A%259F%25E8%2583%25BD%2F" aria-label="分享到 Google&#43;">
+          <i class="fa-google-plus" aria-hidden="true"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/697712fef568adfef30579e8cc50baa5?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">Left23333</h4>
+    
+      <div id="about-card-bio">学习是所有通往成功道路中最简单的那一条</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Programmer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        重庆
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://example.org/images/cover2.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://example.org/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

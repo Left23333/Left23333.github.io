@@ -1,22 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>category on left-blog</title>
-    <link>https://left23333.github.io/categories/category/</link>
+    <link>https://example.org/categories/category/</link>
     <description>Recent content in category on left-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Apr 2020 22:41:41 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 29 May 2022 10:05:28 +0800</lastBuildDate><atom:link href="https://example.org/categories/category/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C#异步笔记</title>
+      <link>https://example.org/2022/05/c#%E5%BC%82%E6%AD%A5%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 29 May 2022 10:05:28 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/c#%E5%BC%82%E6%AD%A5%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://left23333.github.io/categories/category/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网络安全笔记</title>
+      <link>https://example.org/2022/05/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 29 May 2022 10:05:28 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>微服务笔记</title>
+      <link>https://example.org/2022/05/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 29 May 2022 10:05:28 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>语句收集</title>
+      <link>https://example.org/2022/05/%E8%AF%AD%E5%8F%A5%E6%94%B6%E9%9B%86/</link>
+      <pubDate>Sun, 29 May 2022 10:05:28 +0800</pubDate>
+      
+      <guid>https://example.org/2022/05/%E8%AF%AD%E5%8F%A5%E6%94%B6%E9%9B%86/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cpp笔记</title>
-      <link>https://left23333.github.io/2020/04/cpp%E7%AC%94%E8%AE%B0/</link>
+      <link>https://example.org/2020/04/cpp%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 27 Apr 2020 22:41:41 +0800</pubDate>
       
-      <guid>https://left23333.github.io/2020/04/cpp%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://example.org/2020/04/cpp%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
     
