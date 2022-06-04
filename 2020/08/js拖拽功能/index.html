@@ -305,56 +305,56 @@ ondragend: 用户完成元素拖动后触发</p>
 ondragover: 当某被拖动的对象在另一对象容器范围内拖动时触发此事件<br>
 ondragleave: 当被鼠标拖动的对象离开其容器范围内时触发此事件<br>
 ondrop: 在一个拖动过程中，释放鼠标键时触发此事件</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> allowDrop<span style="color:#f92672">(</span>ev<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    ev.preventDefault<span style="color:#f92672">()</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">allowDrop</span>(<span style="color:#a6e22e">ev</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">preventDefault</span>();
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> drag<span style="color:#f92672">(</span>ev<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    //获取当前拖动元素ID，并设置到DataTransfer中
-</span></span><span style="display:flex;"><span>    ev.dataTransfer.setData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span>, ev.target.id<span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span>    var dragID <span style="color:#f92672">=</span> ev.target.id;
-</span></span><span style="display:flex;"><span>    //获取当前拖动元素的innerHTML，并设置到DataTransfer中
-</span></span><span style="display:flex;"><span>    ev.dataTransfer.setData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;text&#34;</span>, document.getElementById<span style="color:#f92672">(</span>dragID<span style="color:#f92672">)</span>.innerHTML<span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span>    ev.dataTransfer.setData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name&#34;</span>, document.getElementById<span style="color:#f92672">(</span>dragID<span style="color:#f92672">)</span>.title<span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">drag</span>(<span style="color:#a6e22e">ev</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//获取当前拖动元素ID，并设置到DataTransfer中
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">setData</span>(<span style="color:#e6db74">&#34;id&#34;</span>, <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dragID</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">id</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//获取当前拖动元素的innerHTML，并设置到DataTransfer中
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">setData</span>(<span style="color:#e6db74">&#34;text&#34;</span>, document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">dragID</span>).<span style="color:#a6e22e">innerHTML</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">setData</span>(<span style="color:#e6db74">&#34;name&#34;</span>, document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">dragID</span>).<span style="color:#a6e22e">title</span>);
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> drop<span style="color:#f92672">(</span>ev<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    ev.preventDefault<span style="color:#f92672">()</span>;
-</span></span><span style="display:flex;"><span>    //获取DataTransfer中的ID值
-</span></span><span style="display:flex;"><span>    var dragID <span style="color:#f92672">=</span> ev.dataTransfer.getData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span>    var dragText <span style="color:#f92672">=</span> ev.dataTransfer.getData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;text&#34;</span><span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span>    var dragName <span style="color:#f92672">=</span> ev.dataTransfer.getData<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">drop</span>(<span style="color:#a6e22e">ev</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">preventDefault</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//获取DataTransfer中的ID值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dragID</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#34;id&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dragText</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#34;text&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dragName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">getData</span>(<span style="color:#e6db74">&#34;name&#34;</span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    //获取目标元素的id；
-</span></span><span style="display:flex;"><span>    var id <span style="color:#f92672">=</span> ev.target.id;
-</span></span><span style="display:flex;"><span>    //将字符串分割为数组
-</span></span><span style="display:flex;"><span>    var arr <span style="color:#f92672">=</span> id.split<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//获取目标元素的id；
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">id</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//将字符串分割为数组
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#34;&#34;</span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>arr<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;p&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        var forid <span style="color:#f92672">=</span> document.getElementById<span style="color:#f92672">(</span>id<span style="color:#f92672">)</span>.getAttribute<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;for&#34;</span><span style="color:#f92672">)</span>;
-</span></span><span style="display:flex;"><span>        document.getElementById<span style="color:#f92672">(</span>forid<span style="color:#f92672">)</span>.dataset.channel <span style="color:#f92672">=</span> dragID;
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arr</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;p&#39;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">forid</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">id</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;for&#34;</span>);
+</span></span><span style="display:flex;"><span>        document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">forid</span>).<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">channel</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dragID</span>;
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    arr<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;p&#39;</span>;
-</span></span><span style="display:flex;"><span>    //将数组合并为字符串
-</span></span><span style="display:flex;"><span>    var pID <span style="color:#f92672">=</span> arr.join<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">arr</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;p&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//将数组合并为字符串
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">pID</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arr</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;&#34;</span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    //p标签显示为被拖动标签的名称
-</span></span><span style="display:flex;"><span>    document.getElementById<span style="color:#f92672">(</span>pID<span style="color:#f92672">)</span>.innerHTML <span style="color:#f92672">=</span> dragName;
-</span></span><span style="display:flex;"><span>    //input元素赋值为物理通道ID
-</span></span><span style="display:flex;"><span>    //document.getElementById<span style="color:#f92672">(</span>id<span style="color:#f92672">)</span>.value <span style="color:#f92672">=</span> dragID;
-</span></span><span style="display:flex;"><span>    //将物理通道保存到data-content中
-</span></span><span style="display:flex;"><span>    document.getElementById<span style="color:#f92672">(</span>id<span style="color:#f92672">)</span>.dataset.channel <span style="color:#f92672">=</span> dragID;
-</span></span><span style="display:flex;"><span>    //修改title与通道相同
-</span></span><span style="display:flex;"><span>    document.getElementById<span style="color:#f92672">(</span>pID<span style="color:#f92672">)</span>.title <span style="color:#f92672">=</span> dragText;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//p标签显示为被拖动标签的名称
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">pID</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dragName</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//input元素赋值为物理通道ID
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//document.getElementById(id).value = dragID;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//将物理通道保存到data-content中
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">id</span>).<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">channel</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dragID</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//修改title与通道相同
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">pID</span>).<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dragText</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    //dic_cfg<span style="color:#f92672">[</span>id<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> dragID;
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;droptarget&#34;</span> ondrop<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;drop(event)&#34;</span> ondragover<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;allowDrop(event)&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>	&lt;p ondragstart<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;drag(event)&#34;</span> draggable<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dragtarget&#34;</span>&gt;拖动我!&lt;/p&gt;
-</span></span><span style="display:flex;"><span>&lt;/div&gt;
-</span></span><span style="display:flex;"><span>&lt;div class<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;droptarget&#34;</span> ondrop<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;drop(event)&#34;</span> ondragover<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;allowDrop(event)&#34;</span>&gt;&lt;/div&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//dic_cfg[id] = dragID;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">div</span> <span style="color:#f92672">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;droptarget&#34;</span> <span style="color:#f92672">ondrop</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;drop(event)&#34;</span> <span style="color:#f92672">ondragover</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;allowDrop(event)&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&lt;</span><span style="color:#f92672">p</span> <span style="color:#f92672">ondragstart</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;drag(event)&#34;</span> <span style="color:#f92672">draggable</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#f92672">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dragtarget&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">拖动我</span><span style="color:#f92672">!&lt;/</span><span style="color:#f92672">p</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#f92672">div</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">div</span> <span style="color:#f92672">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;droptarget&#34;</span> <span style="color:#f92672">ondrop</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;drop(event)&#34;</span> <span style="color:#f92672">ondragover</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;allowDrop(event)&#34;</span><span style="color:#f92672">&gt;&lt;/</span><span style="color:#f92672">div</span><span style="color:#f92672">&gt;</span>
 </span></span></code></pre></div>
               
 

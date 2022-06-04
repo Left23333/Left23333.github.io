@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on left-blog</title>
+    <title>Python on left-blog</title>
     <link>https://left23333.github.io/tags/python/</link>
-    <description>Recent content in python on left-blog</description>
+    <description>Recent content in Python on left-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 May 2022 10:05:28 +0800</lastBuildDate><atom:link href="https://left23333.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
@@ -13,6 +13,15 @@
       <pubDate>Sun, 29 May 2022 10:05:28 +0800</pubDate>
       
       <guid>https://left23333.github.io/2022/05/python%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scrapy笔记</title>
+      <link>https://left23333.github.io/2022/05/scrapy%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 29 May 2022 10:05:28 +0800</pubDate>
+      
+      <guid>https://left23333.github.io/2022/05/scrapy%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
     </item>
     
