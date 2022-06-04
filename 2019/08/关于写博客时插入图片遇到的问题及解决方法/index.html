@@ -305,17 +305,17 @@
             <div class="main-content-wrap">
               <p>通过将图片上传GitHub仓库，使用网络图片引用的方式解决图片插入问题</p>
 <p>根据vs code提示插入图片
-<img src="./images/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/%E6%8F%90%E7%A4%BA%E8%B7%AF%E5%BE%84.JPG" alt="按提示插入图片"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/%E6%8F%90%E7%A4%BA%E8%B7%AF%E5%BE%84.JPG" alt="按提示插入图片"></p>
 <p>但是插入的图片却无法在网页上正常显示
-<img src="./images/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5.JPG" alt="text"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5.JPG" alt="text"></p>
 <p>尝试更改路径后，发现无论是绝对路劲还是相对路劲都无法显示图片</p>
 <p>探索良久后依然无法找到本地图片的插入方式（实际上成功本地插入图片过，但我忘了-_-||），加上本地图片容易丢失所以我选择了网络图片插入方式。</p>
 <p>我们利用GitHub仓库，即可实现本地图片的网络化。在GitHub中新建一个仓库，用于存储照片，<strong>记得勾选上创建README</strong>
-<img src="./images/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/%E5%88%9B%E5%BB%BA%E5%AD%98%E5%82%A8%E7%85%A7%E7%89%87%E7%9A%84%E4%BB%93%E5%BA%93.JPG" alt="创建仓库"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/%E5%88%9B%E5%BB%BA%E5%AD%98%E5%82%A8%E7%85%A7%E7%89%87%E7%9A%84%E4%BB%93%E5%BA%93.JPG" alt="创建仓库"></p>
 <p>copy下仓库的路径
-<img src="./images/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/%E5%A4%8D%E5%88%B6.JPG" alt="复制路劲"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/%E5%A4%8D%E5%88%B6.JPG" alt="复制路劲"></p>
 <p>在本地新建一个文件夹，将路径移动到新建文件夹下，将GitHub仓库克隆下来，命令是git clone 仓库地址（要使用git命令得先在电脑上装好git-bash）
-<img src="./images/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93.JPG" alt="克隆仓库"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5%E9%97%AE%E9%A2%98/%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93.JPG" alt="克隆仓库"></p>
 <p>克隆完后会有你所建仓库名的文件夹，在仓库文件夹下添加你要上传到仓库的图片</p>
 <p>接着我们进入终端，首先进入仓库文件夹
 添加仓库文件夹下的所有文件：git add .
@@ -329,7 +329,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>!<span style="color:#f92672">[</span>text<span style="color:#f92672">](</span>https://gitee.com/left23333/images/blob/master/图片插入问题/text.JPG<span style="color:#f92672">)</span>
 </span></span></code></pre></div><p>然而这样仍然无法显示图片，这里我们还需要将路径中的blob改为raw即可，如下</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>!<span style="color:#f92672">[</span>text<span style="color:#f92672">](</span>https://gitee.com/left23333/images/blob/master/图片插入问题/text.JPG<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>!<span style="color:#f92672">[</span>text<span style="color:#f92672">](</span>./images/图片插入问题/text.JPG<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>!<span style="color:#f92672">[</span>text<span style="color:#f92672">](</span>https://github.com/left23333/left23333.github.io/blob/master/images/图片插入问题/text.JPG<span style="color:#f92672">)</span>
 </span></span></code></pre></div><p>当图片已经被引用后，再将新的图片推送到GitHub仓库，git可能会报错，解决命令如下</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git add .
 </span></span><span style="display:flex;"><span>git pull origin master --allow-unrelated-histories

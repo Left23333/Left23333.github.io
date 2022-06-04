@@ -307,7 +307,7 @@
 <p>远程主机：<br>
 1.jdk <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">下载地址</a><br>
 下拉网页看到Java SE 8u221，选择服务器 JRE<br>
-<img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/1.jpg" alt="1">
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/1.jpg" alt="1">
 选择linux.tar.gz文件下载
 o
 2.tomcat <a href="https://tomcat.apache.org/">下载地址</a><br>
@@ -324,15 +324,15 @@ o
 <a href="https://cloud.tencent.com/">地址</a></p>
 <h1 id="三安装配置服务器软件">三.安装配置服务器软件</h1>
 <p>Putty可直接打开，输入公网IP
-<img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/2.jpg" alt="2"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/2.jpg" alt="2"></p>
 <p>输入root回车，再输入密码即可远程登录（注意密码默认不显示）
-<img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/3.jpg" alt="3"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/3.jpg" alt="3"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd  /home/          <span style="color:#75715e"># 移动到home路径下  </span>
 </span></span><span style="display:flex;"><span>mkdir <span style="color:#f92672">(</span>文件名<span style="color:#f92672">)</span>      <span style="color:#75715e"># 新建文件，文件名自起</span>
 </span></span></code></pre></div><p>WinsCP输入IP后登录
-<img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/4.jpg" alt="4"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/4.jpg" alt="4"></p>
 <p>找到下载的jdk和tomcat压缩包传到上传到服务器主机上
-<img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/5.jpg" alt="5"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/5.jpg" alt="5"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd file
 </span></span><span style="display:flex;"><span>tar -zxvf jdk<span style="color:#f92672">(</span>压缩包名<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 将解压文件移动到/usr/local/路径下并删除jdk压缩包</span>
@@ -344,34 +344,34 @@ o
 </span></span></code></pre></div><h2 id="配置环境变量">配置环境变量</h2>
 <p>移动路径：cd  /usr/local/
 ls查看下载的jdk版本
-<img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/6.jpg" alt="6"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/6.jpg" alt="6"></p>
 <p>使用vim编辑：vim  /etc/profile<br>
 Vim按i进入插入模式，添加完成后esc退出插入模式，然后按shift + ：输入wq保存并退出<br>
 光标移动到末尾添加以下三行<br>
 第一行jdk版本改为自己下载的版本
-<img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/7.jpg" alt="7">
-<img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/8.jpg" alt="8"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/7.jpg" alt="7">
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/8.jpg" alt="8"></p>
 <p>配置好环境变量后重启云服务器主机
-<img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/9.jpg" alt="9"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/9.jpg" alt="9"></p>
 <p>关闭putty再次连接输入java -version查看环境变量是否配置成功，如果打印出版本信息则成功
-<img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/10.jpg" alt="10"></p>
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/10.jpg" alt="10"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd /home/file/tomcat/bin
 </span></span><span style="display:flex;"><span>ls
-</span></span></code></pre></div><p><img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/11.jpg" alt="11"></p>
+</span></span></code></pre></div><p><img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/11.jpg" alt="11"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># startup.sh是启动命令，shutdown.sh是关闭命令</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 现在我们来启动一下 ./代表当前目录</span>
 </span></span><span style="display:flex;"><span>./startup.sh
-</span></span></code></pre></div><p><img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/12.jpg" alt="12"></p>
+</span></span></code></pre></div><p><img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/12.jpg" alt="12"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 完成以上步骤后在浏览器中输入IP号即可访问tomcat的页面</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 返回上一级目录</span>
 </span></span><span style="display:flex;"><span>cd ..
 </span></span><span style="display:flex;"><span>cd webapps/ROOT
 </span></span><span style="display:flex;"><span>ls  <span style="color:#75715e"># 查看，它默认访问的是ROOT下的index.jsp文件</span>
-</span></span></code></pre></div><p><img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/13.jpg" alt="13"></p>
+</span></span></code></pre></div><p><img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/13.jpg" alt="13"></p>
 <h1 id="四购买域名并设置域名解析">四.购买域名并设置域名解析</h1>
 <p><a href="https://promotion.aliyun.com/ntms/act/domainbrand.html?spm=5176.8112568.483655.4.125a9ed5W59sgm">阿里云新人购买域名活动界面</a></p>
 <p>学习测试随便购买一个价格便宜的域名就行，购买完毕后进入阿里云解析域名
-<img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/14.jpg" alt="14">
+<img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/14.jpg" alt="14">
 解析后就可以直接使用域名访问网页了。</p>
 <h1 id="五上传网站文件">五.上传网站文件</h1>
 <p>刚刚我们访问的网站是默认的tomcat页面，现在我们删除ROOT目录下的文件上传我们自己的网页文件就可以了</p>
@@ -381,7 +381,7 @@ Vim按i进入插入模式，添加完成后esc退出插入模式，然后按shif
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除时斜杠前一定要加dot，代表当前文件，  </span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 单纯一个斜杠代表根目录，星号代表所有文件，</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># 如果没有dot很危险，会删除服务器所有文件，导致服务器崩溃</span>
-</span></span></code></pre></div><p><img src="./images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/15.jpg" alt="15"></p>
+</span></span></code></pre></div><p><img src="https://github.com/left23333/left23333.github.io/blob/master/images/%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/15.jpg" alt="15"></p>
 <p>完成这一步后我们就可以将终端退出来了
 输入退出命令：exit
 后期网站的文件我们都可以通过winsCP上传。</p>
