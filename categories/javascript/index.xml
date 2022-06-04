@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JavaScript on left-blog</title>
-    <link>https://example.org/categories/javascript/</link>
+    <link>https://left23333.github.io/categories/javascript/</link>
     <description>Recent content in JavaScript on left-blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2020 16:44:14 +0800</lastBuildDate><atom:link href="https://example.org/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Aug 2020 16:44:14 +0800</lastBuildDate><atom:link href="https://left23333.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Js拖拽功能</title>
-      <link>https://example.org/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/</link>
+      <link>https://left23333.github.io/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/</link>
       <pubDate>Thu, 27 Aug 2020 16:44:14 +0800</pubDate>
       
-      <guid>https://example.org/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://left23333.github.io/2020/08/js%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD/</guid>
       <description></description>
     </item>
     
